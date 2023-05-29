@@ -58,7 +58,10 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
     var barLayout = {
       title: "Top 10 OTUs",
       yaxis: { title: "OTU IDs" },
-      margin: { t: 30, l: 150 }
+      margin: { 
+        t: 30,
+        l: 150
+       }
     };
     
     Plotly.newPlot("bar", barData, barLayout);
@@ -96,18 +99,42 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
         type: "indicator",
         mode: "gauge+number",
         gauge: {
-          axis: { range: [0, 10], tickmode: "inside", tick0: 2, dticks: 2 },
-          bar: {color: "black"},
+          axis: { 
+            range: [0, 9], 
+            tickmode: "linear", 
+            tick0: 1, 
+            dticks: 2 
+          },
+          bar: {color: "orange"},
           steps: [
-            { range: [0, 1], color: "#edf8e9" },
-            { range: [1, 2], color: "#bae4b3" },
-            { range: [2, 3], color: "#74c476" },
-            { range: [3, 4], color: "#31a354" },
-            { range: [4, 5], color: "#006d2c" },
-            { range: [5, 6], color: "#006d2c" },
-            { range: [6, 7], color: "#006d2c" },
-            { range: [7, 8], color: "#006d2c" },
-            { range: [8, 9], color: "#006d2c" }
+            { range: [0, 1], 
+              color: "#edf8e9" 
+            },
+            { range: [1, 2], 
+              color: "#bae4b3" 
+            },
+            { range: [2, 3], 
+              color: "#74c476"
+             },
+            { range: [3, 4], 
+              color: "#31a354"
+             },
+            { range: [4, 5], 
+              color: "#006d2c" 
+            },
+            { range: [5, 6], 
+              color: "#006d2c" 
+            },
+            { range: [6, 7], 
+              color: "#006d2c" 
+            },
+            { range: [7, 8], 
+              color: "#006d2c" 
+            },
+            { range: [8, 9], 
+              color: "#006d2c" 
+            }
+ 
           ],
           
         }
